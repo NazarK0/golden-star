@@ -14,11 +14,6 @@ const createHttpServer = (app: Application, port: number, appName=''): void => {
   });
 }
 
-const createHttpsServer = (port: number, appName=''):void => {
-  throw new Error('Not implemented yet')
-}
-
 export {
   createHttpServer,
-  createHttpsServer,
 }

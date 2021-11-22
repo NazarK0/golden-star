@@ -1,7 +1,6 @@
 import path from 'path';
 import express from 'express';
 import initLogger from './utils/initLogger';
-import appUsersRouter from './components/appUsers/appUsers.router';
 import authentication from './components/authentication';
 import authenticationMiddleware from './components/authentication/middleware';
 import authRouter from './components/authentication/router';
@@ -21,7 +20,6 @@ app.use('/', [
 ]);
 app.use('/admin', authenticationMiddleware, [
   administratorsRouter,
-  appUsersRouter
 ]);
 
 app.get('*', (req, res) => {

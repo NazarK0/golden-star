@@ -1,5 +1,5 @@
 import { DataTypes, Sequelize } from "sequelize";
-import { IHeroModel } from "../../../types/IHero";
+import { IHeroModel } from "../../types/IHero";
 
 const Hero = (db: Sequelize): void => {
   db.define<IHeroModel>(

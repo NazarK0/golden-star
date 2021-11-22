@@ -2,9 +2,9 @@ import { Sequelize } from 'sequelize';
 import { logger } from '../app';
 import applyExtraSetup from './config/extra-setup';
 
-import AppUser from './models/AppUser';
+import Hero from './models/Heroes';
 
-const modelDefiners = [AppUser];
+const modelDefiners = [Hero];
 
 const { DB_STR = '' } = process.env;
 const sequelize = new Sequelize(DB_STR, {

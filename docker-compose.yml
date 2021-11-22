@@ -1,67 +1,69 @@
 version: "3.9"
 services:
-  # admin-public-api:
-  #   build:
-  #     context: ./admin-api
-  #     target: development
-  #   environment: 
-  #     - DB_STR=postgres://superadmin:1111@db/app_db
-  #     - NODE_ENV=development
-  #   volumes:
-  #     - ./admin-api/src:/app/src
-  #     - ${PWD}/admin-api/nodemon.json:/app/nodemon.json
-  #   container_name: admin-api
-  #   ports:
-  #     - '8083:80'
-  #   depends_on:
-  #     - db
-  #   command: npm run dev
-  # admin-ui-api:
-  #   build:
-  #     context: ./admin-publicApi
-  #     target: development
-  #   environment: 
-  #     - DB_STR=postgres://superadmin:1111@db/app_db
-  #     - NODE_ENV=development
-  #   volumes:
-  #     - ./admin-api/src:/app/src
-  #     - ${PWD}/admin-api/nodemon.json:/app/nodemon.json
-  #   container_name: admin-publicApi
-  #   ports:
-  #     - '8083:80'
-  #   depends_on:
-  #     - db
-  #   command: npm run dev
-  # admin-ui:
-  #   build:
-  #     context: ./admin-ui
-  #     target: development
-  #   environment: 
-  #     - NODE_ENV=development
-  #   volumes:
-  #     - ./admin-ui/src:/app/src
-  #     - ${PWD}/admin-ui/nodemon.json:/app/nodemon.json
-  #   container_name: admin-ui
-  #   ports:
-  #     - '8082:80'
-  #   depends_on:
-  #     - admin-api
-  #   command: npm run dev
-  # app-ui:
-  #   build:
-  #     context: ./app-ui
-  #     target: development
-  #   environment: 
-  #     - NODE_ENV=development
-  #   volumes:
-  #     - ./app-ui/src:/app/src
-  #     - ${PWD}/app-ui/nodemon.json:/app/nodemon.json
-  #   container_name: app-ui
-  #   ports:
-  #     - '8080:80'
-  #   depends_on:
-  #     - admin-api
-  #   command: npm run dev
+  admin-public-api:
+    build:
+      context: ./admin-publicApi
+      target: development
+    environment: 
+      - DB_STR=postgres://superadmin:1111@db/app_db
+      - NODE_ENV=development
+    volumes:
+      - ./admin-publicApi/src:/app/src
+      - ${PWD}/admin-publicApi/nodemon.json:/app/nodemon.json
+    container_name: admin-api
+    ports:
+      - '8084:80'
+    depends_on:
+      - db
+    command: npm run dev
+  admin-ui-api:
+    build:
+      context: ./admin-uiApi
+      target: development
+    environment: 
+      - DB_STR=postgres://superadmin:1111@db/app_db
+      - NODE_ENV=development
+    volumes:
+      - ./admin-uiApi/src:/app/src
+      - ${PWD}/admin-uiApi/nodemon.json:/app/nodemon.json
+    container_name: admin-uiApi
+    ports:
+      - '8083:80'
+    depends_on:
+      - db
+    command: npm run dev
+  admin-ui:
+    build:
+      context: ./admin-ui
+      target: development
+    environment: 
+      - NODE_ENV=development
+    volumes:
+      - ./admin-ui/src:/app/src
+      - ${PWD}/admin-ui/nodemon.json:/app/nodemon.json
+    container_name: admin-ui
+    ports:
+      - '8082:80'
+    depends_on:
+      - admin-ui-api
+      - db
+    command: npm start
+  app-ui:
+    build:
+      context: ./app-ui
+      target: development
+    environment: 
+      - NODE_ENV=development
+    volumes:
+      - ./app-ui/src:/app/src
+      - ${PWD}/app-ui/nodemon.json:/app/nodemon.json
+    container_name: app-ui
+    ports:
+      - '8080:80'
+    depends_on:
+      - admin-public-api
+      - db
+    command: npm start
   db:
     image: postgres 
     container_name: db

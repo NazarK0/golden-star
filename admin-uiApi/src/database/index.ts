@@ -2,10 +2,8 @@ import { Sequelize } from 'sequelize';
 import { logger } from '../app';
 import applyExtraSetup from './config/extra-setup';
 import Admin from './models/Admin';
-import AppUser from './models/AppUser';
 
 const modelDefiners = [
-  AppUser,
   Admin
 ];
 

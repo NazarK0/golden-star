@@ -1,4 +1,4 @@
-FROM node AS base
+FROM node:14 AS base
 ENV PORT 80
 ENV TZ=Europe/Kiev
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
