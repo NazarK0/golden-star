@@ -4,30 +4,21 @@ import { Link } from "react-router-dom";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import s from '../assets/styles/index-page.module.css'
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-        <div className="container mx-auto items-center flex flex-wrap">
-          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
-            <div className="pt-32 sm:pt-0">
-              <h2 className="font-semibold text-4xl text-blueGray-600">
-                Notus React - A beautiful extension for Tailwind CSS.
-              </h2>
+            <div className={ s.introduction }>
+              <h1 className="font-semibold text-4xl text-blueGray-600">
+                ОРДЕН ЗОЛОЛОТОЇ ЗІРКИ
+              </h1>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Notus React is Free and Open Source. It does not change any of
-                the CSS from{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-600"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>
-                . It features multiple HTML elements and it comes with dynamic
-                components for ReactJS, Vue and Angular.
+                Звання Герой України — державна нагорода України, найвищий ступінь відзнаки в Україні, 
+                що надається громадянам України за здійснення визначного геройського вчинку або 
+                видатного трудового досягнення. Героєві України вручається орден «Золота Зірка»...
               </p>
               <div className="mt-12">
                 <a
@@ -35,25 +26,20 @@ export default function Index() {
                   target="_blank"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Get started
-                </a>
-                <a
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
-                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  target="_blank"
-                >
-                  Github Star
+                  Детальніше
                 </a>
               </div>
+              
             </div>
-          </div>
-        </div>
-
-        <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-          src={require("assets/img/pattern_react.png").default}
-          alt="..."
-        />
+            <img className="pattern2"
+                src={require("assets/img/вишиванка_узор2.png").default}
+                alt="..."
+              />
+              <img
+                className="medal"
+                src={require("assets/img/120px-Medal_of_Golden_Star_Ukraine.png").default}
+                alt="..."
+              />       
       </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
