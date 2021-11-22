@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  admin-panel:
+    build:
+      target: production
+    environment: 
+      - NODE_ENV=production
+    command: node dist/server.js
+  public-api:
+    build:
+      target: production
+    environment: 
+      - NODE_ENV=production
+    command: node dist/server.js

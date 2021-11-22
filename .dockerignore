@@ -1,0 +1,9 @@
+node_modules
+.git
+.idea
+.code
+.eslintrc.js
+.babelrc
+.gitignore
+Dockerfile.*
+docker-compose.dev.yml
