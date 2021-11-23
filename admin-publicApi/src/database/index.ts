@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 import { logger } from '../app';
 import applyExtraSetup from './config/extra-setup';
 
-import Hero from './models/Heroes';
+import Hero from './models/Hero';
 
 const modelDefiners = [Hero];
 
