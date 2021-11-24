@@ -10,11 +10,11 @@ export default function HomePage() {
       <img
         className={s.medal}
         src={require("assets/img/120px-Medal_of_Golden_Star_Ukraine.png").default}
-        alt="..."
+        alt="Орден 'Золотої Зірки'"
       />
       <div className={ s.introduction }>
         <h1 className="font-semibold text-4xl text-blueGray-600">
-          ОРДЕН ЗОЛОЛОТОЇ ЗІРКИ
+          ОРДЕН ЗОЛОТОЇ ЗІРКИ
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
           Звання Герой України — державна нагорода України, найвищий ступінь відзнаки в Україні, 

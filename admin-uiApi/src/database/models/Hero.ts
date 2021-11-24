@@ -19,6 +19,16 @@ const Hero = (db: Sequelize): void => {
         allowNull: false,
         defaultValue: DataTypes.NOW,
       },
+      nominationDate: {
+        type: DataTypes.DATEONLY,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+      },
+      deathDate: {
+        type: DataTypes.DATEONLY,
+        allowNull: true,
+        defaultValue: null,
+      },
       gender: {
         type: DataTypes.ENUM,
         allowNull: false,
@@ -28,6 +38,15 @@ const Hero = (db: Sequelize): void => {
       avatarImg: {
         type: DataTypes.STRING,
       },
+      photos: {
+        type: DataTypes.ARRAY,
+        allowNull: false,
+        defaultValue: [],
+      },
+      bio: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      }
     },
     {
       tableName: "Heroes",

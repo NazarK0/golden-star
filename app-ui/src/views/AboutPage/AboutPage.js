@@ -6,11 +6,11 @@ import s from './AboutPage.module.css'
 export default function AboutPage() {
   return (
     <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-      <div className='container'>
+      <div className={classNames('container', s.aboutPage)}>
         <img
           className={s.medal}
           src={require("assets/img/120px-Medal_of_Golden_Star_Ukraine.png").default}
-          alt="..."
+          alt="Орден 'Золотої Зірки'"
         />
         <div>
           <p>
