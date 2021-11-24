@@ -13,7 +13,7 @@ export default function CardNewsMain({
 }) {
   return (
     <div className={classNames(s.cardNewsMain, 'relative flex flex-col break-words bg-white rounded mb-6 xl:mb-0 shadow-lg')}>
-      <Link to={`/news-page/${id}`} target="_blank">
+      <Link to={`/mainNews-page/${id}`} target="_blank">
         <img className={s.image} src={imgSrc} alt={title} />
         <div className={s.publishDate}>{publishDate}</div>
         <div className='flex flex-col items-center'>
