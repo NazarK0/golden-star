@@ -1,12 +1,26 @@
 /*eslint-disable*/
 import React from "react";
 import s from './NewsPage.module.css';
-import Card from '../../components/Cards/CardStats';
+import CardNews from '../../components/Cards/CardNews';
+import CardNewsMain from '../../components/Cards/CardNewsMain';
 
 export default function NewsPage() {
   return (
-    <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
-      <Card />
+    <section className="header relative pt-24 items-center flex flex-col">
+    <div className="flex flex-row flex-wrap">
+      <CardNewsMain />
+      <CardNewsMain />
+      <CardNewsMain />
+      <CardNewsMain />
+    </div>
+      <CardNews />
+      <CardNews />
+      <CardNews />
+      <CardNews />
+      <CardNews />
+      <CardNews />
+      <CardNews />
+      <CardNews />
     </section>
   );
 }

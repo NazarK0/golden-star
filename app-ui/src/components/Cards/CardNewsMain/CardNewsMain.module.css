@@ -1,0 +1,29 @@
+.cardNewsMain {
+  width: 260px;
+  height: 400px;
+  margin: 7px;
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(204, 204, 204);
+}
+
+.publishDate {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  padding-right: 7px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 0.8rem;
+  margin: 0 30px;
+}
