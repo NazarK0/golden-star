@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
-import PageLayout from "layouts/PageLayout/PageLayout";
+import PageLayout from "layouts/PageLayout";
 
 ReactDOM.render(
   <BrowserRouter>

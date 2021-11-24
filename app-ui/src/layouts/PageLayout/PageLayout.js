@@ -2,10 +2,10 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import Navbar from "../../components/Navbar";
+import Footer from "components/Footer";
 import s from './PageLayout.module.css'
-import HomePage from "views/GalleryPage";
+import HomePage from "views/HomePage";
 import AboutPage from "views/AboutPage";
 import GalleryPage from "views/GalleryPage";
 import NewsPage from "views/NewsPage";
@@ -14,7 +14,7 @@ import ContactsPage from "views/ContactsPage";
 export default function PageLayout() {
   return (
     <>
-      <IndexNavbar fixed />
+      <Navbar fixed />
       <Switch>
         <Route path="/home" exact component={HomePage} />
         <Route path="/about" exact component={AboutPage} />

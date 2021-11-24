@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FooterAdmin() {
+export default function Footer() {
   return (
     <>
       <footer className="block py-4">
@@ -14,7 +14,7 @@ export default function FooterAdmin() {
                   href="https://www.creative-tim.com?ref=nr-footer-admin"
                   className="text-blueGray-500 hover:text-blueGray-700 text-sm font-semibold py-1"
                 >
-                  Creative Tim
+                  Ванівський
                 </a>
               </div>
             </div>
@@ -22,34 +22,22 @@ export default function FooterAdmin() {
               <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                 <li>
                   <a
-                    href="https://www.creative-tim.com?ref=nr-footer-admin"
+                    href="https://github.com/NazarK0"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
+                    target="_blank"
                   >
-                    Creative Tim
+                    <i class="fab fa-github"></i> &nbsp;
+                    GitHub
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.creative-tim.com/presentation?ref=nr-footer-admin"
+                    href="https://telegram.me/nazar_vs"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
+                    target="_blank"
                   >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://blog.creative-tim.com?ref=nr-footer-admin"
-                    className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                  >
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md?ref=nr-footer-admin"
-                    className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                  >
-                    MIT License
+                    <i class="fab fa-telegram-plane"></i> &nbsp;
+                    Telegram
                   </a>
                 </li>
               </ul>
