@@ -1,4 +1,25 @@
 .aboutPage {
   display: flex;
-  
+}
+
+.goldenStar {
+  height: 200px;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.history {
+  list-style-type: square;
+}
+
+.constitution {
+  list-style: decimal;
+}
+
+li {
+  margin-bottom: 3px;
 }

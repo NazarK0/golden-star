@@ -1,0 +1,23 @@
+.contentBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.title {
+  margin: 30px 0 30px 0;
+}
+
+.contactsList > li {
+  display: flex;
+  justify-content: space-between;
+}
+.contactsList > li:hover span {
+  color: rgb(93, 14, 124);
+}
+.contactsList > li span {
+  font-weight: bold;
+  margin: 0 24px 0 4px;
+}

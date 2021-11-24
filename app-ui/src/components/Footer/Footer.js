@@ -24,9 +24,9 @@ export default function Footer() {
                   <a
                     href="https://github.com/NazarK0"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
-                    <i class="fab fa-github"></i> &nbsp;
+                    <i className="fab fa-github"></i> &nbsp;
                     GitHub
                   </a>
                 </li>
@@ -34,9 +34,9 @@ export default function Footer() {
                   <a
                     href="https://telegram.me/nazar_vs"
                     className="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
-                    <i class="fab fa-telegram-plane"></i> &nbsp;
+                    <i className="fab fa-telegram-plane"></i> &nbsp;
                     Telegram
                   </a>
                 </li>
