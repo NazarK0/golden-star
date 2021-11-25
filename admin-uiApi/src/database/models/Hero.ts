@@ -11,6 +11,7 @@ const Hero = (db: Sequelize): void => {
       nominationDate: { type: DataTypes.DATEONLY, allowNull: false, defaultValue: DataTypes.NOW },
       deathDate: { type: DataTypes.DATEONLY, allowNull: true, defaultValue: null },
       gender: { type: DataTypes.ENUM, allowNull: false, values: ["M", "W"], defaultValue: "M" },
+      isPosthumously: {type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
       profession: { type: DataTypes.STRING, allowNull: false, defaultValue: "Не встановлено" },
       reason: { type: DataTypes.STRING, allowNull: false, defaultValue: "Не встановлено" },
       avatarImg: { type: DataTypes.STRING },

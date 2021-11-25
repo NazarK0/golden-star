@@ -22,6 +22,7 @@ export default interface IHero {
   nominationDate: Date;
   deathDate: DeathDateType;
   gender: Gender;
+  isPosthumously: boolean;
   profession: string;
   reason: string;
   avatarImg: string;
