@@ -14,12 +14,12 @@ export default function CardHero({
   return (
     <div className={classNames(s.cardHero, 'relative flex flex-col break-words bg-white rounded mb-6 xl:mb-0 shadow-lg')}>
       <Link to={`/hero-page/${id}`} target="_blank">
-        <img className={s.image} src={require(imgSrc).default} alt={name} />
+        <img className={s.image} src={require("assets/img/test-user.png").default} alt={name} />
         <div className={s.nominationDate}>{nominationDate}</div>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-row justify-center'>
           <h4 className={s.name}>{name}</h4>
           {isPosthumously &&
-            <div className={s.posthumouslyBlock}>posthumously</div>
+            <img className={s.posthumouslyImage} src={require("assets/img/posthumously.png").default} alt="Посмертно" title="Посмертно"/>
           }
         </div>
       </Link>
@@ -29,7 +29,7 @@ export default function CardHero({
 
 CardHero.defaultProps = {
   id: "0",
-  imgSrc: "./assets/img/test-user.png",
+  imgSrc: "assets/img/ukraine.png",
   name: "Ван Дорн",
   isPosthumously: false,
   nominationDate: "04.15.2021",

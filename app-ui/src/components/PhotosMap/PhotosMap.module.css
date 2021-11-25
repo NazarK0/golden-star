@@ -1,0 +1,18 @@
+.photosMap {
+  /* position: relative; */
+}
+
+.photos {
+  /* background-image: url('assets/img/ukraine.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.photos > img{
+  height: 40px;
+  margin: 1px;
+  opacity: 0.6;
+}

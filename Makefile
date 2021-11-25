@@ -12,8 +12,10 @@ stop:
 	docker-compose down --remove-orphans
 db-console:
 	docker exec -it db bash
-panel-console:
-	docker exec -it admin-panel bash
+app-ui-console:
+	docker exec -it app-ui bash
+panel-ui-console:
+	docker exec -it admin-ui bash
 panel-logs:
 	docker logs admin-panel
 api-console:

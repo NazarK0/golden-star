@@ -1,6 +1,6 @@
-.cardNewsMain {
-  width: 260px;
-  height: 360px;
+.cardHero {
+  width: 160px;
+  height: 230px;
   margin: 7px;
 }
 
@@ -10,7 +10,7 @@
   background-color: rgb(204, 204, 204);
 }
 
-.publishDate {
+.nominationDate {
   text-align: right;
   font-size: 0.9rem;
   margin-bottom: 15px;
@@ -26,4 +26,8 @@
 .description {
   font-size: 0.8rem;
   margin: 0 30px;
+}
+
+.posthumouslyImage {
+  width: 30px;
 }
