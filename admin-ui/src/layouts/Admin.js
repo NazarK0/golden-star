@@ -4,9 +4,9 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // components
 
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import Sidebar from "components/Sidebar";
 import HeaderStats from "components/Headers/HeaderStats.js";
-import FooterAdmin from "components/Footers/FooterAdmin.js";
+import Footer from "components/Footer";
 
 // views
 
@@ -49,7 +49,7 @@ export default function Admin() {
             <Route exact path="/admin/profile" component={AdminProfilePage} />
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
-          <FooterAdmin />
+          <Footer />
         </div>
       </div>
     </>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import NotificationDropdown from "components/Dropdowns/NotificationDropdown.js";
 import UserDropdown from "components/Dropdowns/UserDropdown.js";
+import s from './Sidebar.module.css';
 
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
@@ -19,11 +20,11 @@ export default function Sidebar() {
             <i className="fas fa-bars"></i>
           </button>
           <Link
-            className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+            className="md:block mx-auto md:pb-2 text-blueGray-600 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
             <img
-              className='{}'
+              className={s.medal}
               src={require("assets/img/120px-Medal_of_Golden_Star_Ukraine.png").default}
               alt="Орден 'Золотої Зірки'"
             />
@@ -90,7 +91,7 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-tv mr-2 text-sm " +
+                      "fas fa-home mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/dashboard") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
@@ -103,7 +104,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/dashboard") !== -1
+                    (window.location.href.indexOf("/admin/medal/awarded-list") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
@@ -111,8 +112,8 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-tv mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/dashboard") !== -1
+                      "fas fa-award mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/medal/awarded-list") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
@@ -124,7 +125,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/settings") !== -1
+                    (window.location.href.indexOf("/admin/medal/history") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
@@ -132,8 +133,8 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-tools mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/settings") !== -1
+                      "fas fa-monument mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/medal/history") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
@@ -145,7 +146,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/tables") !== -1
+                    (window.location.href.indexOf("/admin/medal/about") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
@@ -153,8 +154,8 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/tables") !== -1
+                      "fas fa-pencil-ruler mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/medal/about") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
@@ -166,7 +167,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/tables") !== -1
+                    (window.location.href.indexOf("/admin/medal/procedure") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
@@ -174,8 +175,8 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/tables") !== -1
+                      "fas fa-clipboard-list mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/medal/procedure") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
@@ -187,7 +188,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/tables") !== -1
+                    (window.location.href.indexOf("/admin/medal/regulations") !== -1
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
@@ -195,8 +196,8 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/tables") !== -1
+                      "fas fa-book mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/medal/regulations") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
                     }
@@ -212,20 +213,40 @@ export default function Sidebar() {
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/main-news/create") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
                   to="/admin/main-news/create"
                 >
-                  <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i class={
+                      "fas fa-plus mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/main-news/create") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }></i>{" "}
                   Створити
                 </Link>
               </li>
 
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/main-news/archive") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
                   to="/admin/main-news/archive"
                 >
-                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                  <i class={
+                      "fas fa-archive mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/main-news/archive") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }></i>{" "}
                   Архів
                 </Link>
               </li>
@@ -236,20 +257,40 @@ export default function Sidebar() {
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/news/create") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
                   to="/admin/news/create"
                 >
-                  <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i class={
+                      "fas fa-plus mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/news/create") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }></i>{" "}
                   Створити
                 </Link>
               </li>
 
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/admin/news/archive"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/news/archive") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                    to="/admin/news/archive"
                 >
-                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                  <i class={
+                      "fas fa-archive mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/news/archive") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }></i>{" "}
                   Архів
                 </Link>
               </li>
@@ -262,19 +303,34 @@ export default function Sidebar() {
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/contacts") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
                   to="/admin/contacts"
                 >
-                  <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className={
+                      "fas fa-newspaper mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/contacts") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }></i>{" "}
                   Контакти
                 </Link>
               </li>
               <li className="items-center">
                 <Link
-                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/settings") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
                   to="/admin/settings"
                 >
-                  <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i class="fas fa-cogs text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Налаштування
                 </Link>
               </li>

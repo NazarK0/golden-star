@@ -1,16 +1,14 @@
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
 import { Pagination } from '@material-ui/lab';
-import CardTable from "components/Cards/CardTable.js";
-
 import s from './MainNewsArchivePage.module.css'
+import TableMainNews from "components/Tables/TableMainNews";
 
 export default function MainNewsArchivePage() {
   return (
-    <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+    <section className="header relative pt-32 items-center flex flex-col">
       <div className="w-full mb-12 px-4">
-        <CardTable color="dark" />
+        <TableMainNews />
       </div>
       <Pagination count={10} showFirstButton showLastButton className={s.paginationBar} />
     </section>
