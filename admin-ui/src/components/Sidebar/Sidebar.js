@@ -96,6 +96,27 @@ export default function Sidebar() {
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
+                  Дім
+                </Link>
+              </li>
+              <li className="items-center">
+                <Link
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/dashboard") !== -1
+                      ? "text-lightBlue-500 hover:text-lightBlue-600"
+                      : "text-blueGray-700 hover:text-blueGray-500")
+                  }
+                  to="/admin/medal/awarded-list"
+                >
+                  <i
+                    className={
+                      "fas fa-tv mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/dashboard") !== -1
+                        ? "opacity-75"
+                        : "text-blueGray-300")
+                    }
+                  ></i>{" "}
                   Нагороджені
                 </Link>
               </li>
@@ -107,7 +128,7 @@ export default function Sidebar() {
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
-                  to="/admin/settings"
+                  to="/admin/medal/history"
                 >
                   <i
                     className={
@@ -128,7 +149,7 @@ export default function Sidebar() {
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
-                  to="/admin/tables"
+                  to="/admin/medal/about"
                 >
                   <i
                     className={
@@ -149,7 +170,7 @@ export default function Sidebar() {
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
-                  to="/admin/tables"
+                  to="/admin/medal/procedure"
                 >
                   <i
                     className={
@@ -170,7 +191,7 @@ export default function Sidebar() {
                       ? "text-lightBlue-500 hover:text-lightBlue-600"
                       : "text-blueGray-700 hover:text-blueGray-500")
                   }
-                  to="/admin/tables"
+                  to="/admin/medal/regulations"
                 >
                   <i
                     className={
@@ -192,7 +213,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/auth/login"
+                  to="/admin/main-news/create"
                 >
                   <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Створити
@@ -202,7 +223,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/auth/register"
+                  to="/admin/main-news/archive"
                 >
                   <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
                   Архів
@@ -216,7 +237,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/auth/login"
+                  to="/admin/news/create"
                 >
                   <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Створити
@@ -226,7 +247,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/auth/register"
+                  to="/admin/news/archive"
                 >
                   <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
                   Архів
@@ -242,7 +263,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/landing"
+                  to="/admin/contacts"
                 >
                   <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Контакти
@@ -251,7 +272,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  to="/profile"
+                  to="/admin/settings"
                 >
                   <i className="fas fa-user-circle text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Налаштування

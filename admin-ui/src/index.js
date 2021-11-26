@@ -7,13 +7,13 @@ import "assets/styles/tailwind.css";
 
 // layouts
 import Admin from "layouts/Admin.js";
-import Auth from "layouts/Auth.js";
+import Login from "views/auth/Login.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/admin" component={Admin} />
-      <Route path="/auth" component={Auth} />
+      <Route path="/login" component={Login} />
       <Redirect from="*" to="/admin" />
     </Switch>
   </BrowserRouter>,
