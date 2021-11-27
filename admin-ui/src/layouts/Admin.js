@@ -37,14 +37,21 @@ export default function Admin() {
             <Route exact path="/admin/dashboard" component={Dashboard} />
             <Route exact path="/admin/medal/awarded-list" component={AwardedListPage} />
             <Route exact path="/admin/medal/history" component={MedalHistoryPage} />
+            <Route exact path="/admin/medal/history/edit" component={MedalHistoryPage} />
             <Route exact path="/admin/medal/about" component={MedalAboutPage} />
+            <Route exact path="/admin/medal/about/edit" component={MedalAboutPage} />
             <Route exact path="/admin/medal/procedure" component={MedalProcedurePage} />
+            <Route exact path="/admin/medal/procedure/edit" component={MedalProcedurePage} />
             <Route exact path="/admin/medal/regulations" component={MedalRegulationsPage} />
+            <Route exact path="/admin/medal/regulations/edit" component={MedalRegulationsPage} />
             <Route exact path="/admin/news/create" component={NewsCreateForm} />
+            <Route exact path="/admin/news/edit" component={NewsCreateForm} />
             <Route exact path="/admin/news/archive" component={NewsArchivePage} />
             <Route exact path="/admin/main-news/create" component={MainNewsCreateForm} />
+            <Route exact path="/admin/main-news/edit" component={MainNewsCreateForm} />
             <Route exact path="/admin/main-news/archive" component={MainNewsArchivePage} />
             <Route exact path="/admin/contacts" component={ContactsPage} />
+            <Route exact path="/admin/contacts/edit" component={ContactsPage} />
             <Route exact path="/admin/settings" component={SettingsPage} />
             <Route exact path="/admin/profile" component={AdminProfilePage} />
             <Redirect from="/admin" to="/admin/dashboard" />

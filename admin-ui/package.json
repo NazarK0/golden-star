@@ -10,6 +10,7 @@
     "@material-ui/lab": "^4.0.0-alpha.60",
     "@popperjs/core": "2.9.1",
     "@tailwindcss/forms": "0.2.1",
+    "@tinymce/tinymce-react": "^3.13.0",
     "autoprefixer": "10.2.5",
     "chart.js": "2.9.4",
     "gulp": "4.0.2",

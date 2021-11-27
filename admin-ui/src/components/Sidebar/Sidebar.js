@@ -221,7 +221,7 @@ export default function Sidebar() {
                   }
                   to="/admin/main-news/create"
                 >
-                  <i class={
+                  <i className={
                       "fas fa-plus mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/main-news/create") !== -1
                         ? "opacity-75"
@@ -241,7 +241,7 @@ export default function Sidebar() {
                   }
                   to="/admin/main-news/archive"
                 >
-                  <i class={
+                  <i className={
                       "fas fa-archive mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/main-news/archive") !== -1
                         ? "opacity-75"
@@ -265,7 +265,7 @@ export default function Sidebar() {
                   }
                   to="/admin/news/create"
                 >
-                  <i class={
+                  <i className={
                       "fas fa-plus mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/news/create") !== -1
                         ? "opacity-75"
@@ -285,7 +285,7 @@ export default function Sidebar() {
                     }
                     to="/admin/news/archive"
                 >
-                  <i class={
+                  <i className={
                       "fas fa-archive mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/news/archive") !== -1
                         ? "opacity-75"
@@ -330,7 +330,7 @@ export default function Sidebar() {
                   }
                   to="/admin/settings"
                 >
-                  <i class="fas fa-cogs text-blueGray-400 mr-2 text-sm"></i>{" "}
+                  <i className="fas fa-cogs text-blueGray-400 mr-2 text-sm"></i>{" "}
                   Налаштування
                 </Link>
               </li>
