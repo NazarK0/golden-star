@@ -14,6 +14,7 @@ import Dashboard from "views/admin/Dashboard.js";
 import AwardedListPage from "views/AwardedListPage";
 import MedalHistoryPage from "views/MedalHistoryPage";
 import MedalRegulationsPage from "views/MedalRegulationsPage";
+import MedalRegulationsEditForm from "views/MedalRegulationsEditForm";
 import NewsCreateForm from "views/NewsCreateForm";
 import NewsEditForm from "views/NewsEditForm";
 import MainNewsCreateForm from "views/MainNewsCreateForm";
@@ -45,12 +46,12 @@ export default function Admin() {
             <Route exact path="/admin/medal/procedure" component={MedalProcedurePage} />
             <Route exact path="/admin/medal/procedure/edit" component={MedalProcedurePage} />
             <Route exact path="/admin/medal/regulations" component={MedalRegulationsPage} />
-            <Route exact path="/admin/medal/regulations/edit" component={MedalRegulationsPage} />
+            <Route exact path="/admin/medal/regulations/edit" component={MedalRegulationsEditForm} />
             <Route exact path="/admin/news/create" component={NewsCreateForm} />
             <Route exact path="/admin/news/edit/:id" component={NewsEditForm} />
             <Route exact path="/admin/news/archive" component={NewsArchivePage} />
             <Route exact path="/admin/main-news/create" component={MainNewsCreateForm} />
-            <Route xact path="/admin/main-news/edit/:id" component={MainNewsEditForm} />
+            <Route exact path="/admin/main-news/edit/:id" component={MainNewsEditForm} />
             <Route exact path="/admin/main-news/archive" component={MainNewsArchivePage} />
             <Route exact path="/admin/contacts" component={ContactsPage} />
             <Route exact path="/admin/contacts/edit" component={ContactsPage} />

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { createPopper } from "@popperjs/core";
 
-const ViewPageDropdown = () => {
+const ViewPageDropdown = ({editLink}) => {
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
   const btnDropdownRef = React.createRef();
@@ -44,7 +44,7 @@ const ViewPageDropdown = () => {
           Дії
         </span>
         <Link
-          to="/admin/dashboard"
+          to={editLink}
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700 hover:text-blueGray-500"
           }

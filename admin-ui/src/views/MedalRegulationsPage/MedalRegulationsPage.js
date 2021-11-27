@@ -38,7 +38,7 @@ export default function MedalRegulationsPage() {
 
   return (
     <section className="header relative pt-32 items-center flex flex-col">
-      <ViewPageDropdown />
+      <ViewPageDropdown editLink="/admin/medal/regulations/edit"/>
       <HtmlViewer htmlString={html} />
     </section>
   );
