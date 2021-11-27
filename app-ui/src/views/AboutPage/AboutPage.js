@@ -166,7 +166,6 @@ export default function AboutPage() {
               Церемонія нагородження проходить у Президентському палаці в Києві.
             </p>
           </div>
-          
         </div>
       </div>
     </section>

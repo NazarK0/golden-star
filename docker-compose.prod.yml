@@ -1,14 +1,70 @@
 version: "3.9"
 services:
-  admin-panel:
+  admin-public-api:
     build:
+      context: ./admin-publicApi
+      target: production
+    environment: 
+      - DB_STR=postgres://superadmin:1111@db/app_db
+      - NODE_ENV=production
+    container_name: admin-api
+    ports:
+      - '8084:80'
+    depends_on:
+      - db
+    command: npm run build
+  admin-ui-api:
+    build:
+      context: ./admin-uiApi
+      target: production
+    environment: 
+      - DB_STR=postgres://superadmin:1111@db/app_db
+      - NODE_ENV=production
+    container_name: admin-uiApi
+    ports:
+      - '8083:80'
+    depends_on:
+      - db
+    command: npm run build
+  admin-ui:
+    build:
+      context: ./admin-ui
       target: production
     environment: 
       - NODE_ENV=production
-    command: node dist/server.js
-  public-api:
+    volumes:
+      - ./admin-ui/src:/app/src
+    container_name: admin-ui
+    ports:
+      - '8082:80'
+    depends_on:
+      - admin-ui-api
+      - db
+    command: npm run build
+  app-ui:
     build:
+      context: ./app-ui
       target: production
     environment: 
       - NODE_ENV=production
-    command: node dist/server.js
+    container_name: app-ui
+    ports:
+      - '8080:80'
+    depends_on:
+      - admin-public-api
+      - db
+    command: npm run build
+  db:
+    image: postgres 
+    container_name: db
+    restart: always
+    ports: 
+      - "5432:5432"
+    environment: 
+      - POSTGRES_USER=superadmin
+      - POSTGRES_PASSWORD=1111
+      - POSTGRES_DB=app_db
+    volumes: 
+      - db-volume:/data/db
+volumes: 
+  db-volume:
