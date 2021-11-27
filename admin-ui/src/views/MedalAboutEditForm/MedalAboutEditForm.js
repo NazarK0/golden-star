@@ -1,10 +1,9 @@
 /*eslint-disable*/
-import HtmlViewer from "components/HtmlViewer";
 import React from "react";
-import ViewPageDropdown from '../../components/Dropdowns/ViewPageDropdown';
-import s from './MedalAboutPage.module.css'
+import SimpleEditorPage from "components/SimpleEditorPage";
+import s from './MedalAboutEditForm.module.css'
 
-export default function MedalAboutPage() {
+export default function MedalAboutEditForm() {
   const html = `<p>
             Орден «Золота Зірка» звання Герой України виготовляється із золота і має 
             форму п'ятикутної зірки, накладеної на вінок із дубового листя. Промені 
@@ -30,11 +29,12 @@ export default function MedalAboutPage() {
             розміщується вище мініатюр і планок інших державних нагород України; 
             орденська планка не передбачена.
           </p>`;
+  
+  const onSaveHandler = () => {};
 
   return (
-    <section className="header relative pt-32 items-center flex flex-col">
-      <ViewPageDropdown editLink="/admin/medal/about/edit"/>
-      <HtmlViewer htmlString={html} />
+    <section className="header relative pt-16 items-center flex flex-col">
+      < SimpleEditorPage onSaveHandler={onSaveHandler} title="Редагувати інформацію про орден" text={html}/>
     </section>
   );
 }

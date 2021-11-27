@@ -1,10 +1,9 @@
 /*eslint-disable*/
-import HtmlViewer from "components/HtmlViewer";
 import React from "react";
-import ViewPageDropdown from '../../components/Dropdowns/ViewPageDropdown';
-import s from './MedalProcedurePage.module.css'
+import SimpleEditorPage from "components/SimpleEditorPage";
+import s from './MedalProcedureEditForm.module.css'
 
-export default function MedalProcedurePage() {
+export default function MedalProcedureEditForm() {
   const html = `<p>
               Подання про відзначення званням Герой України, Президенту України можуть 
               вносити: Верховна Рада України; Кабінет Міністрів України; Конституційний 
@@ -56,11 +55,12 @@ export default function MedalProcedurePage() {
             <p>
               Церемонія нагородження проходить у Президентському палаці в Києві.
             </p>`;
+  
+  const onSaveHandler = () => {};
 
   return (
-    <section className="header relative pt-32 items-center flex flex-col">
-      <ViewPageDropdown editLink="/admin/medal/procedure/edit"/>
-      <HtmlViewer htmlString={html} />
+    <section className="header relative pt-16 items-center flex flex-col">
+      < SimpleEditorPage onSaveHandler={onSaveHandler} title="Редагувати процедуру нагородження" text={html}/>
     </section>
   );
 }

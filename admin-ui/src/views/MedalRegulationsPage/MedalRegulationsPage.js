@@ -5,7 +5,7 @@ import ViewPageDropdown from '../../components/Dropdowns/ViewPageDropdown';
 import s from './MedalRegulationsPage.module.css'
 
 export default function MedalRegulationsPage() {
-  const html = `<ol className={s.constitution}>
+  const html = `<ol>
               <li>
                 Звання Герой України присвоюється громадянам України за здійснення 
                 визначного геройського вчинку або визначних трудових досягнень.

@@ -1,10 +1,9 @@
 /*eslint-disable*/
-import HtmlViewer from "components/HtmlViewer";
 import React from "react";
-import ViewPageDropdown from '../../components/Dropdowns/ViewPageDropdown';
-import s from './MedalHistoryPage.module.css'
+import SimpleEditorPage from "components/SimpleEditorPage";
+import s from './MedalHistoryEditForm.module.css'
 
-export default function MedalHistoryPage() {
+export default function MedalHistoryEditForm() {
   const html = `<ul>
             <li>
               23 серпня 1998 року Указом Президента України Л. Д. Кучми № 944/98 встановлена 
@@ -46,11 +45,12 @@ export default function MedalHistoryPage() {
               1 січня календарного року, в якому надано звання Герой України.
             </li>
           </ul>`;
+  
+  const onSaveHandler = () => {};
 
   return (
-    <section className="header relative pt-32 items-center flex flex-col">
-      <ViewPageDropdown editLink="/admin/medal/history/edit"/>
-      <HtmlViewer htmlString={html} />
+    <section className="header relative pt-16 items-center flex flex-col">
+      < SimpleEditorPage onSaveHandler={onSaveHandler} title="Редагувати історію" text={html}/>
     </section>
   );
 }
