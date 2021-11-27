@@ -27,7 +27,7 @@ const ViewPageDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        <i class="fas fa-user-edit text-4xl text-lightBlue-600 hover:text-blueGray-500"></i>
+        <i className="fas fa-user-edit text-4xl text-lightBlue-600 hover:text-blueGray-500"></i>
       </a>
       <div
         ref={popoverDropdownRef}

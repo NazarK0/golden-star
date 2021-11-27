@@ -300,7 +300,7 @@ export default function TableAwarded({ color }) {
                       +(color === "light" ? "text-blueGray-600" : "text-white")
                     }
                   >
-                    <i class="fas fa-cross"></i>&nbsp;Мельников В.О.
+                    <i className="fas fa-cross"></i>&nbsp;Мельников В.О.
                   </span>
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">

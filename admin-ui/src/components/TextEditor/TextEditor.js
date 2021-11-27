@@ -3,18 +3,13 @@
  import { Editor } from '@tinymce/tinymce-react';
 import s from './TextEditor.module.css';
 
-export default function TextEditor() {
+export default function TextEditor({text}) {
   const editorRef = useRef(null);
-  const log = () => {
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
 
   return (
     <Editor
       onInit={(evt, editor) => editorRef.current = editor}
-      initialValue=""
+      initialValue={text}
       init={{
         height: 500,
         menubar: false,
@@ -27,7 +22,7 @@ export default function TextEditor() {
         'bold italic backcolor | alignleft aligncenter ' +
         'alignright alignjustify | bullist numlist outdent indent | ' +
         'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:12px }'
       }}
     />
   );

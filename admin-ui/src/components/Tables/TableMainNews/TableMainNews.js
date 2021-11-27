@@ -72,7 +72,7 @@ export default function TableMainNews({ color }) {
                   Збори героїв України
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                  <TableDropdown />
+                  <TableDropdown editLink="/admin/main-news/edit/0"/>
                 </td>
               </tr>
               <tr>
@@ -83,7 +83,7 @@ export default function TableMainNews({ color }) {
                   Парад ветеранів
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                  <TableDropdown />
+                  <TableDropdown editLink="/admin/main-news/edit/1"/>
                 </td>
               </tr>
             </tbody>
