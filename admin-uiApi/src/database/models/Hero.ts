@@ -15,7 +15,6 @@ const Hero = (db: Sequelize): void => {
       profession: { type: DataTypes.STRING, allowNull: false, defaultValue: "Не встановлено" },
       reason: { type: DataTypes.STRING, allowNull: false, defaultValue: "Не встановлено" },
       avatarImg: { type: DataTypes.STRING },
-      photos: { type: DataTypes.ARRAY, allowNull: false, defaultValue: [] },
       bio: { type: DataTypes.STRING, allowNull: true },
     },
     { tableName: "Heroes" }

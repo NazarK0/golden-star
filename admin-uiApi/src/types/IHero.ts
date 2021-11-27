@@ -26,7 +26,6 @@ export default interface IHero {
   profession: string;
   reason: string;
   avatarImg: string;
-  photos: string[];
   bio: BioType;
 }
 

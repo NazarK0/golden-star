@@ -29,6 +29,7 @@ import MedalAboutEditForm from "views/MedalAboutEditForm";
 import MedalProcedurePage from "views/MedalProcedurePage";
 import MedalProcedureEditForm from "views/MedalProcedureEditForm";
 import AdminProfilePage from "views/AdminProfilePage";
+import EditAwardedForm from "views/EditAwardedForm";
 
 export default function Admin() {
   return (
@@ -42,6 +43,7 @@ export default function Admin() {
           <Switch>
             <Route exact path="/admin/dashboard" component={Dashboard} />
             <Route exact path="/admin/medal/awarded-list" component={AwardedListPage} />
+            <Route exact path="/admin/medal/awarded/edit/:id" component={EditAwardedForm} />
             <Route exact path="/admin/medal/history" component={MedalHistoryPage} />
             <Route exact path="/admin/medal/history/edit" component={MedalHistoryEditForm} />
             <Route exact path="/admin/medal/about" component={MedalAboutPage} />

@@ -4,10 +4,14 @@ test-prod:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -V --build --remove-orphans --force-recreate 
 push:
 	docker-compose -f docker-compose.prod.yml build --force-rm
-	docker image tag now_game_admin-panel:latest 31081991/ng_admin-panel
-	docker image tag now_game_public-api:latest 31081991/ng_public-api
-	docker push 31081991/ng_admin-panel
-	docker push 31081991/ng_public-api
+	docker image tag goldenstar_admin-ui:latest 31081991/gs_admin-ui
+	docker image tag goldenstar_app-ui:latest 31081991/gs_app-ui
+	docker image tag goldenstar_admin-ui-api:latest 31081991/gs_ui-api
+	docker image tag goldenstar_admin-public-api:latest 31081991/gs_public-api
+	docker push 31081991/gs_admin-ui
+	docker push 31081991/gs_app-ui
+	docker push 31081991/gs_ui-api
+	docker push 31081991/gs_public-api
 stop:
 	docker-compose down --remove-orphans
 db-console:
